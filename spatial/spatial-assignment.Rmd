@@ -29,10 +29,10 @@ To do this we are going to need the following spatial data:
 
 ```{r libraries, include= FALSE}
 # install.packages(c("mapview", "raster", "sf"))
-library(mapview)      #interactive maps, raster + vector layers
-library(raster)       #Main raster library
-library(tidyverse)    #our old friend
-library(sf)           #to work with simple features data
+library(tmap)         # raster + vector layers
+library(raster)       # Main raster library
+library(tidyverse)    # our old friend
+library(sf)           # to work with simple features data
 
 ```  
 
@@ -61,7 +61,7 @@ your `shapefiles` directory. Load this in using the `st_read` function.
 ```
 
 ### Task 2
-Plot a map of these protected areas using `plot`, `ggplot` with the `geom_sf` command, or
+Plot a map of these protected areas using `tmap`, `plot`, `ggplot` with the `geom_sf` command, or
 `mapview`. Whichever approach you choose, color the protected areas according
 to their "State" column.  Keep in mind, spatial data is memory intensive - some
 plots make take a little while to load. 
