@@ -1,22 +1,30 @@
-# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
+language: r
 
-language: R
-cache: packages
-dist: xenial
+sudo: required
+dist: trusty
+cache: false
+latex: false
+
 
 addons:
   apt:
-#    sources:
-#      - sourceline: 'ppa:ubuntugis/ubuntugis-unstable'
+    sources:
+      - sourceline: 'ppa:opencpu/jq'
+      - sourceline: 'ppa:ubuntugis/ubuntugis-unstable'
     packages:
-      - libudunits2-dev
+      - libgdal-dev 
+      - libgeos-dev 
+      - libproj-dev 
+      - libudunits2-dev 
+      - libv8-dev 
+      - libjq-dev 
+      - libprotobuf-dev 
+      - protobuf-compiler
+      - libssl-dev
+      - libcairo2-dev
       - libnetcdf-dev
-      - libproj-dev
-      - libgeos-dev
-      - libgdal-dev
       - netcdf-bin
-
-
+      
 script: 
   - R -f tests/render_rmds.R
 
