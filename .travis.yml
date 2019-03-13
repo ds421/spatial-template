@@ -4,7 +4,7 @@ cache: false
 latex: false
 
 before_install:
-  - R -e 'install.packages("rgdal", repos="http://R-Forge.R-project.org")'
+  - R -e 'install.packages("rgdal", repos=c("http://R-Forge.R-project.org", "http://cran.rstudio.com"))'
 
 script: 
   - R -f tests/render_rmds.R
