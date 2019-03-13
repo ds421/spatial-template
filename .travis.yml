@@ -1,7 +1,7 @@
 language: r
 
-cache: false
 latex: false
+cache: packages
 
 repos:
   rforge: http://R-Forge.R-project.org
@@ -9,7 +9,6 @@ repos:
 
 script: 
   - R -f tests/render_rmds.R
-
 
 addons:
   apt:
