@@ -1,7 +1,7 @@
 language: r
 
 sudo: required
-dist: trusty
+dist: xenial
 cache: false
 latex: false
 
@@ -10,7 +10,7 @@ addons:
   apt:
     sources:
       - sourceline: 'ppa:opencpu/jq'
-      - sourceline: 'ppa:ubuntugis/ubuntugis-unstable'
+      - sourceline: 'ppa:ubuntugis/ubuntugis'
     packages:
       - libgdal-dev 
       - libgeos-dev 
