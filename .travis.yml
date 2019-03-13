@@ -1,9 +1,13 @@
 language: r
 
-sudo: required
-dist: xenial
 cache: false
 latex: false
+
+before_script:
+  - R -e 'install.packages("rgdal", repos="http://R-Forge.R-project.org")'
+
+script: 
+  - R -f tests/render_rmds.R
 
 
 addons:
@@ -23,7 +27,3 @@ addons:
       - libcairo2-dev
       - libnetcdf-dev
       - netcdf-bin
-      
-script: 
-  - R -f tests/render_rmds.R
-
