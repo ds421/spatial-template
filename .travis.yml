@@ -15,6 +15,9 @@ addons:
     sources:
       - sourceline: 'ppa:opencpu/jq'
       - sourceline: 'ppa:ubuntugis/ppa'
+
+addons:
+  apt:
     packages:
       - libgdal-dev 
       - libgeos-dev 
